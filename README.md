@@ -6,7 +6,9 @@ If you have any questions or feedback, feel free to contact us using [@goloroden
 
 ## History
 
-Please note that silkveil is a project that was created in 2009, but has been abandoned since then. Hence it may not represent our current knowledge and best practices. This repositoriy is initially there for historical reasons. Feel free to fork and send pull requests.
+*NOTE: Please note that silkveil is a project that was created in 2009, but has been abandoned since then. Hence it may not represent our current knowledge and best practices. This repositoriy is initially there for historical reasons. Feel free to fork and send pull requests.*
+
+Golo Roden has rewritten silkveil using Node.js. See [silkveil.js](https://github.com/goloroden/silkveiljs) for details.
 
 That's it :-)!
 
