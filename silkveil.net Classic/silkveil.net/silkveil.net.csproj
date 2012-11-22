@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F0089D6-17A2-4527-B7EA-16E8FD992FB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>silkveil.net</RootNamespace>
+    <AssemblyName>silkveil.net</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\silkveil.net.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BugzScoutDotNet, Version=1.0.3481.18143, Culture=neutral, PublicKeyToken=2033c38b1af0abfa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced DLLs\BugzScoutDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="cherryflavored.net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f02d69713f90b29e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced DLLs\cherryflavored.net.dll</HintPath>
+    </Reference>
+    <Reference Include="cherryflavored.net.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f02d69713f90b29e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced DLLs\cherryflavored.net.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="LightCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5fe012cccda98455, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced DLLs\LightCore.dll</HintPath>
+    </Reference>
+    <Reference Include="LightCore.Configuration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5fe012cccda98455, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced DLLs\LightCore.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="LightCore.Integration.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5fe012cccda98455, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced DLLs\LightCore.Integration.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced DLLs\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=1.0.0.505, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced DLLs\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PeterBucher.Tools, Version=1.0.33.0, Culture=neutral, PublicKeyToken=b733d4fb6c13b36d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced DLLs\PeterBucher.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="PeterBucher.Web, Version=1.0.33.0, Culture=neutral, PublicKeyToken=b733d4fb6c13b36d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced DLLs\PeterBucher.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.IdentityModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ApplicationHandlerFactory.cs" />
+    <Compile Include="Application\ApplicationModule.cs" />
+    <Compile Include="Application\AspNetRuntimeContext.cs" />
+    <Compile Include="Application\HttpProtocolManager.cs" />
+    <Compile Include="Application\HttpsProtocolManager.cs" />
+    <Compile Include="Application\ProtocolManagerBase.cs" />
+    <Compile Include="Application\X509CertificateIssuerNameRegistry.cs" />
+    <Compile Include="Security\CertificateValidator.cs" />
+    <Compile Include="Application\HandlerAction.cs" />
+    <Compile Include="Application\HandlerFactoryBase.cs" />
+    <Compile Include="Application\NavigationService.cs" />
+    <Compile Include="Authentication\AuthenticationBase.cs" />
+    <Compile Include="Authentication\FtpAuthentication.cs" />
+    <Compile Include="Authentication\HttpBasicAuthentication.cs" />
+    <Compile Include="Authentication\HttpDigestAuthentication.cs" />
+    <Compile Include="Configuration\ProviderConfigurationData.cs" />
+    <Compile Include="Configuration\Rewrite.cs" />
+    <Compile Include="Configuration\RewriteFor.cs" />
+    <Compile Include="Configuration\ServiceActivation.cs" />
+    <Compile Include="Configuration\SilkveilConfiguration.cs" />
+    <Compile Include="Configuration\Wcf.cs" />
+    <Compile Include="Constraints\ConstraintBase.cs" />
+    <Compile Include="Constraints\ValidBeforeConstraint.cs" />
+    <Compile Include="Constraints\ValidCountConstraint.cs" />
+    <Compile Include="Constraints\ValidForIPSubnetConstraint.cs" />
+    <Compile Include="Constraints\ValidFromConstraint.cs" />
+    <Compile Include="DataSources\DataSourceBase.cs" />
+    <Compile Include="DataSources\DataSourceFactory.cs" />
+    <Compile Include="DataSources\FileDataSource.cs" />
+    <Compile Include="DataSources\FtpDataSource.cs" />
+    <Compile Include="DataSources\HttpDataSource.cs" />
+    <Compile Include="DataSources\HttpsDataSource.cs" />
+    <Compile Include="DataSources\IDataSource.cs" />
+    <Compile Include="Downloads\DownloadHandler.cs" />
+    <Compile Include="Downloads\DownloadHandlerFactory.cs" />
+    <Compile Include="ExceptionInfo.cs" />
+    <Compile Include="ExceptionManager.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Authentication\AuthenticationHandler.cs" />
+    <Compile Include="Mappings\Mapping.cs" />
+    <Compile Include="Mappings\MimeTypeMapping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Redirects\Redirect.cs" />
+    <Compile Include="Redirects\RedirectHandler.cs" />
+    <Compile Include="Redirects\RedirectHandlerFactory.cs" />
+    <Compile Include="Resources\Exceptions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exceptions.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\IntegratedSecurityIds.cs" />
+    <Compile Include="Security\SecurityId.cs" />
+    <Compile Include="Services\RedirectService.cs" />
+    <Compile Include="Services\MappingService.cs" />
+    <Compile Include="Users\User.cs" />
+    <Compile Include="Wcf\Contracts\IService.cs" />
+    <Compile Include="Wcf\Service.cs" />
+    <Compile Include="Wcf\ServiceActivationFile.cs" />
+    <Compile Include="Wcf\ServiceActivationProvider.cs" />
+    <Compile Include="Web\ApplicationFacade.cs" />
+    <Compile Include="Web\ApplicationFacadeKey.cs" />
+    <Compile Include="Web\ControllerBase.cs" />
+    <Compile Include="Web\Controllers\HomeController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\Controllers\MappingsController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\Controllers\RedirectsController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\Controllers\ResourcesController.cs" />
+    <Compile Include="Web\Controls\LanguageInfo.cs" />
+    <Compile Include="Web\Controls\LanguageSwitcher.cs" />
+    <Compile Include="Web\IController.cs" />
+    <Compile Include="Web\SessionFacade.cs" />
+    <Compile Include="Web\SessionFacadeKey.cs" />
+    <Compile Include="Web\UIHandlerFactory.cs" />
+    <Compile Include="Web\Views\Home\IndexView.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Views\Mappings\IndexView.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Views\Redirects\IndexView.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ViewBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Exceptions.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Exceptions.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="CodeAnalysisDictionary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Wcf\Service.svc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Web\Resources\MasterPage.html" />
+    <EmbeddedResource Include="Web\Resources\Stylesheet.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\silkveil.net.AddIns\silkveil.net.AddIns.csproj">
+      <Project>{CF4E86D4-2618-4451-A88C-5CFD5E8890DC}</Project>
+      <Name>silkveil.net.AddIns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Contracts\silkveil.net.Contracts.csproj">
+      <Project>{5547ACFF-E48E-40BD-BFB7-A4FF37A7AC34}</Project>
+      <Name>silkveil.net.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Providers\silkveil.net.Providers.csproj">
+      <Project>{C988ADC8-6118-43A7-A22A-8B152901D89D}</Project>
+      <Name>silkveil.net.Providers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

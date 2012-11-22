@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FDECB8CC-F9E8-4608-8E8A-84A31A4B6034}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>silkveil.net.Providers.InMemory.Tests</RootNamespace>
+    <AssemblyName>silkveil.net.Providers.InMemory.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>silkveil.net.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LightCore">
+      <HintPath>..\Referenced DLLs\LightCore 1.4.1\LightCore.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\Referenced DLLs\NUnit 2.5.6.10205\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RedirectMappingProviderTests.cs" />
+    <Compile Include="DownloadMappingProviderTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="silkveil.net.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\silkveil.net.Core.Contracts\silkveil.net.Core.Contracts.csproj">
+      <Project>{A10384F1-37A5-4306-BB33-2AF9DD66D237}</Project>
+      <Name>silkveil.net.Core.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Core\silkveil.net.Core.csproj">
+      <Project>{449DB4B3-E945-45D4-90B3-837A78C8BEFD}</Project>
+      <Name>silkveil.net.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Providers.Contracts\silkveil.net.Providers.Contracts.csproj">
+      <Project>{397C3649-B6D7-40B6-A2B3-B8DB134A349B}</Project>
+      <Name>silkveil.net.Providers.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Providers.InMemory\silkveil.net.Providers.InMemory.csproj">
+      <Project>{48C5CDB7-10EB-4816-833A-5522609CFEFD}</Project>
+      <Name>silkveil.net.Providers.InMemory</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

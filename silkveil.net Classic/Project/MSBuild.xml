@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Publish" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <BasePath>$(MSBuildProjectDirectory)\..\</BasePath>
+
+    <BuildFolder>C:\Temp\Build\silkveil.net\</BuildFolder>
+    <PublishFolder>C:\inetpub\wwwroot\net.silkveil.www\</PublishFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Solution Include="silkveil.net.sln" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WebApplicationProjects Include="$(BasePath)Website\Website.csproj" />
+  </ItemGroup>
+
+  <Target Name="Clean">
+    <MSBuild
+      Projects="@(Solution)"
+      Targets="Clean" />
+    <RemoveDir
+      Directories="$(BuildFolder)" Condition="Exists($(BuildFolder))" />
+  </Target>
+
+  <Target Name="Build" DependsOnTargets="Clean">
+    <MSBuild
+      Projects="@(Solution)"
+      Targets="Build" />
+  </Target>
+
+  <Target Name="Publish" DependsOnTargets="Build">
+    <MakeDir
+      Directories="$(BuildFolder)" Condition="!Exists($(BuildFolder))" />
+    <MSBuild
+      Projects="@(WebApplicationProjects)"
+      Properties="OutDir=$(BuildFolder)"
+      Targets="Rebuild;ResolveReferences;_CopyWebApplication" />
+    <CreateItem Include="$(BuildFolder)_PublishedWebsites\Website\**\*.*">
+      <Output
+        ItemName="PublishedItems"
+        TaskParameter="Include" />
+    </CreateItem>
+    <Copy
+      SourceFiles="@(PublishedItems)"
+      DestinationFolder="$(PublishFolder)%(RecursiveDir)" />
+    <CreateItem Include="$(teamcity_build_workingDir)\Website\bin\*.dll">
+      <Output
+        ItemName="ReferencedDLLs"
+        TaskParameter="Include" />
+    </CreateItem>
+    <Copy
+      SourceFiles="@(ReferencedDLLs)"
+      DestinationFolder="$(PublishFolder)bin" />
+  </Target>
+</Project>

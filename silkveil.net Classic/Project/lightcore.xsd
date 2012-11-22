@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="clr-namespace:LightCore.Configuration;assembly=LightCore.Configuration" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="LightCoreConfiguration">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="LightCoreConfiguration.TypeAliases" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TypeAlias">
+                                <xs:complexType>
+                                    <xs:attribute name="Alias" type="xs:string" use="required" />
+                                    <xs:attribute name="Type" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LightCoreConfiguration.Registrations">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="Registration">
+                                <xs:complexType>
+                                    <xs:attribute name="ContractType" type="xs:string" use="required" />
+                                    <xs:attribute name="ImplementationType" type="xs:string" use="required" />
+                                    <xs:attribute name="Name" type="xs:string" use="optional" />
+                                    <xs:attribute name="Group" type="xs:string" use="optional" />
+                                    <xs:attribute name="Arguments" type="xs:string" use="optional" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="DefaultLifecycle" type="xs:string" use="optional" />
+            <xs:attribute name="ActiveGroupConfigurations" type="xs:string" use="optional" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

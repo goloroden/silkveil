@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<users xmlns="http://schemas.silkveil.net/users/">
+  <user>
+    <securityId>{f2d52cad-9c7c-48ce-ae65-2cb196b075e4}</securityId>
+    <credentials>
+      <login>Administrator</login>
+      <password>3wmuyF0FaFPy2dqchifbNQfzmCBZTv4wOYCsRTOfgOLhQw8PfmOWNef2sS0YU2ejk46qew8vhMvYV6c3Vhev/A==</password>
+    </credentials>
+    <claims>
+      <claim type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" value="Administrator" />
+    </claims>
+  </user>
+</users>

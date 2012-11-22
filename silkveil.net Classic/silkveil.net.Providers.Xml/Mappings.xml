@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mappings xmlns="http://schemas.silkveil.net/mappings/">
+  <mapping>
+    <owner securityId="{f2d52cad-9c7c-48ce-ae65-2cb196b075e4}" />
+    <source id="{9dc98fa4-1bcc-4afb-a7dc-be76e64773b4}" name="Golo-Roden" />
+    <target protocol="file" uri="file:///App_Data/Portrait.png" fileName="Golo-Roden.png" mimeType="image/png" forceDownload="false" />
+  </mapping>
+</mappings>

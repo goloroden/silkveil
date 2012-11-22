@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56280125-88D4-4857-B37B-1754353A137E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>silkveil.net.Containers.Tests</RootNamespace>
+    <AssemblyName>silkveil.net.Containers.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>
+    </DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>silkveil.net.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LightCore, Version=1.4.1.0, Culture=neutral, PublicKeyToken=0e5f0cb63554a380, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced DLLs\LightCore 1.4.1\LightCore.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\Referenced DLLs\NUnit 2.5.6.10205\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContainerBinderTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SilkveilContainerPoolTests.cs" />
+    <Compile Include="SilkveilContainerTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="silkveil.net.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\silkveil.net.Containers.Contracts\silkveil.net.Containers.Contracts.csproj">
+      <Project>{8C85AB63-E3EA-4C9F-A168-F66D2F4CA6E3}</Project>
+      <Name>silkveil.net.Containers.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Containers\silkveil.net.Containers.csproj">
+      <Project>{3BBBE25E-B77A-4256-A849-83CE566C40F4}</Project>
+      <Name>silkveil.net.Containers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.ContentSources.Contracts\silkveil.net.ContentSources.Contracts.csproj">
+      <Project>{FFF772E1-0FCB-4A59-B4D8-41B506AC6CD9}</Project>
+      <Name>silkveil.net.ContentSources.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.ContentSources.File\silkveil.net.ContentSources.File.csproj">
+      <Project>{64D61AA1-E90B-42EC-907F-7CDD39155B48}</Project>
+      <Name>silkveil.net.ContentSources.File</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.ContentSources.Http\silkveil.net.ContentSources.Http.csproj">
+      <Project>{9AF1A369-FC52-4D06-BF18-28975A209607}</Project>
+      <Name>silkveil.net.ContentSources.Http</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Core.Contracts\silkveil.net.Core.Contracts.csproj">
+      <Project>{A10384F1-37A5-4306-BB33-2AF9DD66D237}</Project>
+      <Name>silkveil.net.Core.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Core\silkveil.net.Core.csproj">
+      <Project>{449DB4B3-E945-45D4-90B3-837A78C8BEFD}</Project>
+      <Name>silkveil.net.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Flow.StreamSplitter.Contracts\silkveil.net.Flow.StreamSplitter.Contracts.csproj">
+      <Project>{FA98BF62-553D-4C12-A782-A727C9795FAC}</Project>
+      <Name>silkveil.net.Flow.StreamSplitter.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Flow.StreamSplitter\silkveil.net.Flow.StreamSplitter.csproj">
+      <Project>{FB1C52DE-6395-4564-989D-4C26FFA8723A}</Project>
+      <Name>silkveil.net.Flow.StreamSplitter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.MappingResolvers.Contracts\silkveil.net.MappingResolvers.Contracts.csproj">
+      <Project>{21417668-6BBD-4C8C-9FB0-626F8A4B0966}</Project>
+      <Name>silkveil.net.MappingResolvers.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.MappingResolvers.Download\silkveil.net.MappingResolvers.Download.csproj">
+      <Project>{12B222C0-50C6-47A7-B9F3-B621884258E9}</Project>
+      <Name>silkveil.net.MappingResolvers.Download</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.MappingResolvers.Redirect\silkveil.net.MappingResolvers.Redirect.csproj">
+      <Project>{1657B572-91EC-40B9-AA21-B82703EBFAC8}</Project>
+      <Name>silkveil.net.MappingResolvers.Redirect</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Providers.Contracts\silkveil.net.Providers.Contracts.csproj">
+      <Project>{397C3649-B6D7-40B6-A2B3-B8DB134A349B}</Project>
+      <Name>silkveil.net.Providers.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Providers.InMemory\silkveil.net.Providers.InMemory.csproj">
+      <Project>{48C5CDB7-10EB-4816-833A-5522609CFEFD}</Project>
+      <Name>silkveil.net.Providers.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.RequestListener.Contracts\silkveil.net.RequestListener.Contracts.csproj">
+      <Project>{02CACC32-4F38-4618-82C4-31774601D98F}</Project>
+      <Name>silkveil.net.RequestListener.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.RequestListener.Download\silkveil.net.RequestListener.Download.csproj">
+      <Project>{717A8769-AA84-4FF7-B2BE-E35371FDCA5A}</Project>
+      <Name>silkveil.net.RequestListener.Download</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.RequestListener.Redirect\silkveil.net.RequestListener.Redirect.csproj">
+      <Project>{A01D9B9C-1872-4B82-BDBF-FBF4225BBF2A}</Project>
+      <Name>silkveil.net.RequestListener.Redirect</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.StreamFactories.Contracts\silkveil.net.StreamFactories.Contracts.csproj">
+      <Project>{CD2BD8DF-BD55-4412-8008-87EDC2C58814}</Project>
+      <Name>silkveil.net.StreamFactories.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.StreamFactories.Http.Contracts\silkveil.net.StreamFactories.Http.Contracts.csproj">
+      <Project>{26848C33-8F2B-4F17-878E-C97B01D7640D}</Project>
+      <Name>silkveil.net.StreamFactories.Http.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.StreamFactories.Http\silkveil.net.StreamFactories.Http.csproj">
+      <Project>{A975108B-2CE5-42C7-93CF-7A8CDC7670BA}</Project>
+      <Name>silkveil.net.StreamFactories.Http</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Tests.Infrastructure\silkveil.net.Tests.Infrastructure.csproj">
+      <Project>{5594A216-3949-41B8-A983-8DB7BE731C20}</Project>
+      <Name>silkveil.net.Tests.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

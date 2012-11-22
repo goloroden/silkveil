@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CDE3CA2D-3C3F-4A8B-A397-4D4AA15369A2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>silkveil.net.Integration.Web</RootNamespace>
+    <AssemblyName>silkveil.net.Integration.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\silkveil.net.Integration.Web.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>silkveil.net.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SilkveilHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="silkveil.net.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\silkveil.net.Containers.Contracts\silkveil.net.Containers.Contracts.csproj">
+      <Project>{8C85AB63-E3EA-4C9F-A168-F66D2F4CA6E3}</Project>
+      <Name>silkveil.net.Containers.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Containers\silkveil.net.Containers.csproj">
+      <Project>{3BBBE25E-B77A-4256-A849-83CE566C40F4}</Project>
+      <Name>silkveil.net.Containers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.ContentSources.Contracts\silkveil.net.ContentSources.Contracts.csproj">
+      <Project>{FFF772E1-0FCB-4A59-B4D8-41B506AC6CD9}</Project>
+      <Name>silkveil.net.ContentSources.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.ContentSources.File\silkveil.net.ContentSources.File.csproj">
+      <Project>{64D61AA1-E90B-42EC-907F-7CDD39155B48}</Project>
+      <Name>silkveil.net.ContentSources.File</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.ContentSources.Http\silkveil.net.ContentSources.Http.csproj">
+      <Project>{9AF1A369-FC52-4D06-BF18-28975A209607}</Project>
+      <Name>silkveil.net.ContentSources.Http</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Core.Contracts\silkveil.net.Core.Contracts.csproj">
+      <Project>{A10384F1-37A5-4306-BB33-2AF9DD66D237}</Project>
+      <Name>silkveil.net.Core.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.Core\silkveil.net.Core.csproj">
+      <Project>{449DB4B3-E945-45D4-90B3-837A78C8BEFD}</Project>
+      <Name>silkveil.net.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.RequestListener.Contracts\silkveil.net.RequestListener.Contracts.csproj">
+      <Project>{02CACC32-4F38-4618-82C4-31774601D98F}</Project>
+      <Name>silkveil.net.RequestListener.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\silkveil.net.RequestListener.Download\silkveil.net.RequestListener.Download.csproj">
+      <Project>{717A8769-AA84-4FF7-B2BE-E35371FDCA5A}</Project>
+      <Name>silkveil.net.RequestListener.Download</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

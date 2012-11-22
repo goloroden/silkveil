@@ -1,0 +1,87 @@
+﻿* {
+	padding: 0px;
+	margin: 0px;
+}
+
+html {
+    height: 100%;
+    margin-top: 1px;
+}
+
+body  {
+    font-size: 100.01%;
+    font-family: verdana, sans-serif;
+    margin: 2em;
+}
+
+img {
+	border: none;
+}
+
+a {
+    color:black;
+}
+
+a.active {
+    font-weight: bold;
+}
+
+a:hover {
+    background-color:#EFEFEF;
+    border-bottom:1px dotted black;
+    text-decoration:none;
+}
+
+h1 {
+    color: #444455;
+    font-size: 2em;
+    font-family: Sans-Serif;
+    border-bottom: 1px dotted black;
+}
+
+#menu {
+    
+}
+
+#menu ul {
+    
+}
+
+#menu ul li {
+    float: left;
+    list-style: none;
+    
+    margin: 1em;
+}
+
+#breadCrumb {
+    float: right;
+}
+
+#breadCrumb ul li  {
+    float: left;
+    list-style: none;
+    
+    font-size: 0.8m;
+}
+
+#content {
+    padding: 2em;
+}
+
+#content label {
+    float:left;
+    text-align:right;
+    margin: 2px;
+    width:6em;
+}
+
+#content br {
+    clear: left;
+}
+
+#footer {
+    text-align: center;
+    padding: 1em;
+    border-top: 1px dotted black;
+}
